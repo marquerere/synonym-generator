@@ -8,14 +8,10 @@
         Select up to 5 words then press Generate.
       </h2>
     </div>
-    <div class="flex flex-row justify-center">
+    <div>
       <word-input />
     </div>
-    <button
-      class="border border-white rounded py-4 px-8 text-white transition hover:bg-purple-500 lato"
-    >
-      Generate!
-    </button>
+
     <word-roulette />
   </div>
 </template>
