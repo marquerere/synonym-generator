@@ -61,7 +61,7 @@
           <line x1="9" y1="9" x2="15" y2="15"></line>
         </svg>
         <svg
-          v-show="wordList.length > 1 && index < 4"
+          v-show="wordList.length > 1 && index != wordList.length - 1"
           @click="moveInput(index, index + 1)"
           class="cursor-pointer opacity-40 hover:opacity-100 transition"
           xmlns="http://www.w3.org/2000/svg"
