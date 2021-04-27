@@ -161,7 +161,10 @@ export default {
                     if (definition["synonyms"]) {
                       definition["synonyms"].map((synonym) => {
                         console.log(synonym);
-                        if (!this.synonymList[word].includes(synonym)) {
+                        if (
+                          !this.synonymList[word].includes(synonym) &&
+                          word !== synonym
+                        ) {
                           this.synonymList[word].push(synonym);
                         }
                       });
