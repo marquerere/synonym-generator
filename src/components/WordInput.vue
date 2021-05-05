@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row justify-center">
-    <div
+    <!-- <div
       v-for="(input, index) in wordList"
       :key="`word-${index}`"
       class="flex p-2 flex-col"
@@ -80,7 +80,7 @@
       </div>
     </div>
   </div>
-  <div class="flex justify-center">
+  <div class="flex justify-center mt-4">
     <button
       @click="handleClick()"
       class="border border-white rounded py-4 px-8 text-white transition hover:bg-purple-500 lato"
@@ -101,7 +101,7 @@
       <div v-if="!synonymList[key].length" class="text-xs text-red-500">
         No synonyms found.
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
