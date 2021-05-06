@@ -1,9 +1,14 @@
 <template>
   <div :class="mode">
-    <div class="app bg-white text-gray-900 dark:bg-gray-800 dark:text-white">
-      <nav-bar @toggle="toggleTheme" />
+    <div
+      class="app antialiased flex flex-col items-center justify-center space-y-8 bg-white dark:bg-gray-900 dark:text-gray-50"
+    >
+      <page-header />
+      <div class="flex flex-row space-x-4 w-1/2">
+        <settings @toggle="toggleTheme" />
+        <user-input />
+      </div>
       <word-input />
-      <user-input />
     </div>
   </div>
 
@@ -11,7 +16,8 @@
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
+import PageHeader from "./components/PageHeader.vue";
+import Settings from "./components/Settings.vue";
 import WordRoulette from "./components/WordRoulette.vue";
 import WordInput from "./components/WordInput.vue";
 import UserInput from "./components/UserInput.vue";
@@ -24,10 +30,11 @@ export default {
     };
   },
   components: {
+    PageHeader,
     WordRoulette,
     WordInput,
     UserInput,
-    NavBar,
+    Settings,
   },
   methods: {
     toggleTheme() {
@@ -44,11 +51,12 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 
 .app {
   width: 100vw;
+  height: 100vh;
   min-height: 100vh;
 }
 </style>
